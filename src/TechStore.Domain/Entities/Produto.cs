@@ -30,6 +30,14 @@ namespace TechStore.Domain.Entities
 
         public DateTime CriadoEm { get; private set; }
 
+        public void Atualizar(string nomeProduto, string descricao, int quantidadeEmEstoque, decimal valorUnitario)
+        {
+            NomeProduto = nomeProduto;
+            Descricao = descricao;
+            QuantidadeEmEstoque = quantidadeEmEstoque;
+            ValorUnitario = valorUnitario;
+        }
+
         public void Validar()
         {
             if (string.IsNullOrWhiteSpace(NomeProduto))

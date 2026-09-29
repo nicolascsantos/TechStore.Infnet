@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TechStore.Data.Configurations;
 using TechStore.Domain.Entities;
 
 namespace TechStore.Data

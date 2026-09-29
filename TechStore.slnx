@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/TechStore.Application/TechStore.Application.csproj" />
     <Project Path="src/TechStore.Data/TechStore.Data.csproj" />
     <Project Path="src/TechStore.Domain/TechStore.Domain.csproj" />
   </Folder>

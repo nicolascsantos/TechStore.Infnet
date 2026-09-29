@@ -7,11 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.12" />
+    <PackageReference Include="MediatR" Version="12.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TechStore.Application\TechStore.Application.csproj" />
     <ProjectReference Include="..\TechStore.Domain\TechStore.Domain.csproj" />
   </ItemGroup>
 
