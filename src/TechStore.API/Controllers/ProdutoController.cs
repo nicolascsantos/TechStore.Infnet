@@ -30,7 +30,7 @@ namespace TechStore.API.Controllers
         [HttpGet()]
         [ProducesResponseType(typeof(APIResponse<ProdutoOutput>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> Listar([FromBody] ListarProdutosAPIInput input, CancellationToken cancellationToken)
+        public async Task<IActionResult> Listar(CancellationToken cancellationToken)
         {
             var output = await _mediator.Send(new ListarProdutosInput(), cancellationToken);
             return Ok(new APIResponse<List<ProdutoOutput>>(output));
