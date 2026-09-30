@@ -29,6 +29,7 @@ namespace TechStore.Application.UseCases.Produto.CriarProduto
             await _unitOfWork.Commit(cancellationToken);
 
             return new ProdutoOutput(
+                produto.Id,
                 produto.NomeProduto,
                 produto.Descricao,
                 produto.QuantidadeEmEstoque,

@@ -6,6 +6,11 @@ namespace TechStore.Data
 {
     public class TechStoreDbContext : DbContext
     {
+        public TechStoreDbContext(DbContextOptions options) : base(options)
+        {
+            
+        }
+
         public DbSet<Produto> Produtos => Set<Produto>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -18,6 +18,7 @@ namespace TechStore.Application.UseCases.Produto.ListarProdutos
             listaProdutos.ForEach(produto =>
             {
                 listaProdutosOutput.Add(new ProdutoOutput(
+                    produto.Id,
                     produto.NomeProduto,
                     produto.Descricao,
                     produto.QuantidadeEmEstoque,

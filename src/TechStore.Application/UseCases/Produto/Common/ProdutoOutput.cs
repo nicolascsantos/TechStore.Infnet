@@ -2,6 +2,8 @@
 {
     public class ProdutoOutput
     {
+        public Guid Id { get; private set; }
+
         public string NomeProduto { get; private set; }
 
         public string Descricao { get; private set; }
@@ -13,6 +15,7 @@
         public DateTime CriadoEm { get; private set; }
 
         public ProdutoOutput(
+            Guid id,
             string nomeProduto,
             string descricao,
             int quantidadeEmEstoque,
@@ -20,6 +23,7 @@
             DateTime criadoEm
         )
         {
+            Id = id;
             NomeProduto = nomeProduto;
             Descricao = descricao;
             QuantidadeEmEstoque = quantidadeEmEstoque;

@@ -16,6 +16,7 @@ namespace TechStore.Application.UseCases.Produto.ObterProdutoPorId
             var produto = await _produtoRepository.Get(request.Id, cancellationToken);
 
             return new ProdutoOutput(
+                produto.Id,
                 produto.NomeProduto,
                 produto.Descricao,
                 produto.QuantidadeEmEstoque,
