@@ -16,6 +16,14 @@ builder.Services.AddControllers(options => options.Filters.Add(typeof(APIGlobalE
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("StaticWebApp", policy =>
+        policy.WithOrigins("https://jolly-sand-030e7df1e.5.azurestaticapps.net")
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
+
 builder.Services.AddDbContext<TechStoreDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Default")
 ));
@@ -63,6 +71,8 @@ if (app.Environment.IsDevelopment())
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
+app.UseRouting();
+app.UseCors("StaticWebApp");
 app.UseAuthorization();
 
 app.MapControllers();
